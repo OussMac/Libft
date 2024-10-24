@@ -21,20 +21,24 @@ First order of business comes down to Setting up the Makefile
 
  **Notes :**
 - Basic Makefile structure :
+
 	target : dependencies 
-		commands
-		first target is always the default : rule when you use the command make
-	target -> is the file we want to make
-	dependencies -> are the files needed to exist for this target to be made
-	commands : for example like the compile command `gcc -o file.c -o file.o`
+	commands
+	First target is always the default : rule when you use the command make.
+	
+	`target` -> is the file we want to make
+	`dependencies` -> are the files needed to exist for this target to be made
+	`commands` : for example like the compile command `gcc -o file.c -o file.o`
 
 * **Variables :** 
+
 	you can declare a variable using the syntax `(=)`
 		example : `NAME = main / CC = gcc`
 	and call it using the `\$(variable \$(NAME)`
 	usual variables: `FLAGS - CC - SRC - OBJ - NAME` ...
 	
 - **Pattern rules :**
+
 	pattern rules are a powerful way for automation, when creating flexible rules
 	these let you create one 1 rule for many files instead of doing too many rules
 	
@@ -44,6 +48,7 @@ First order of business comes down to Setting up the Makefile
 	relationships between the specific files, and `*` just match files without connecting them.
 	
 - **Automatic variables :**
+
 	`$@` : The target name.
 	`$<` : The first dependency 
 	`$^` : All dependencies
@@ -53,6 +58,7 @@ First order of business comes down to Setting up the Makefile
 	command -o \$\@ \$\<   |  `cc $(FLAGS) -o $@ $<`
 	
 - **Phony targets :**
+
 	Adding `.Phony` to a target will prevent Make from confusing the phony target with a file name.
 	in simple terms, commands and rules that are not meant to conflict with files with the same name 
 	for example :
