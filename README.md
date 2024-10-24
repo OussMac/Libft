@@ -56,7 +56,7 @@ First order of business comes down to Setting up the Makefile
 `clean - all - recompile -fclean ...`
 
 
-undefined
+<img src="attachment/a69bd5c176ad65579372d57be7a06407.png" />
 ### Libft.h (header file) :
 
 The header file in C is used to declare functions and variables, to avoid repeating ready to use functions from The Library   **Libft**   and always having them just by including the header file i.
