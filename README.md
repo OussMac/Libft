@@ -53,12 +53,10 @@ First order of business comes down to Setting up the Makefile
 	Adding .Phony to a target will prevent Make from confusing the phony target with a file name.
 	in simple terms, commands and rules that are not meant to conflict with files with the same name 
 	for example :
-	- <mark class="hltr-lg">clean - all - recompile -fclean ....</mark>
----
+		<mark class="hltr-lg">clean - all - recompile -fclean ....</mark>
 
 undefined
 
 
----
 ### Libft.h (header file) :
 
