@@ -55,8 +55,7 @@ First order of business comes down to Setting up the Makefile
 	for example :
 		<mark class="hltr-lg">clean - all - recompile -fclean ....</mark>
 
+
 undefined
-
-
 ### Libft.h (header file) :
 
