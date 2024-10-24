@@ -20,40 +20,40 @@ Now into the Detailed guide:
 First order of business comes down to Setting up the Makefile
 
  Notes :
-- Basic <span style="color: Gold;">Makefile</span> structure :
+- Basic ~={8}Makefile =~structure :
 	target : dependencies 
 		commands
-		first target is always the <span style="color: #ADD8E6">default</span> : rule when you use the command make
+		first target is always the ~={cyan}default =~: rule when you use the command make
 
-* <span style="color: Gold">Variables</span> : 
-	you can declare a variable using the syntax <span style="color: #ADD8E6">(=)</span> 
-		example : <span style="color: #ADD8E6">NAME = main / CC = gcc</span> 
-	and call it using the <mark class="hltr-b">$(variable $(NAME</mark>)
-	usual variables: <span style="color: #66FF99">FLAGS - CC - SRC - OBJ - NAME ...</span> 
+* ~={8}Variables =~: 
+	you can declare a variable using the syntax ~={cyan}(=)=~
+		example : ~={cyan}NAME = main / CC = gcc=~
+	and call it using the ~={cyan}\$(variable \$(NAME)=~
+	usual variables: ~={green}FLAGS - CC - SRC - OBJ - NAME ... =~
 	
-- <span style="color: Gold">Pattern rules</span> :
+- ~={8}Pattern rules =~:
 	pattern rules are a powerful way for automation, when creating flexible rules
 	these let you create one 1 rule for many files instead of doing too many rules
 	
-	using the <mark class="hltr-r">Pattern rules</mark> for example <mark class="hltr-g">%</mark>
-	<mark class="hltr-b">%.o: %.c</mark> means for any target file .o compile it from the same .c file
-	<mark class="hltr-g">%</mark> matches the file name but unlike <mark class="hltr-r">* Wildcard</mark> is that % creat
-	relationships between the specific files, and <mark class="hltr-r">*</mark> just match files without connecting them.
+	using the ~={red}Pattern rules=~ for example ~={yellow}\%=~
+	\%.o: \%.c means for any target file .o compile it from the same .c file
+	~={yellow}\%=~ matches the file name but unlike ~={red}\* Wildcard=~ is that \% create
+	relationships between the specific files, and ~={red}\*=~ just match files without connecting them.
 	
-- <span style="color: Gold">Automatic variables</span> :
-	\$@ : The target name.
-	\$< : The first dependency 
-	\$^ : All dependencies
+- ~={8}Automatic variables=~ :
+	\$\@ : The target name.
+	\$\< : The first dependency 
+	\$\^ : All dependencies
 
 	example :
-	target : dependency   |  %.o : %.c
-	command -o $@ $<   |  <mark class="hltr-o">cc</mark> <mark class="hltr-b">\$(FLAGS</mark>) -o <mark class="hltr-r">\$@</mark> \$< 
+	target : dependency   |  \%.o : \%.c
+	command -o \$\@ \$\<   |  ~={9}cc=~ ~={cyan}\$(FLAGS) =~-o ~={red}\$\@=~ ~={red}\$\< =~
 	
-- <span style="color: Gold">Phony targets</span> :
+- Phony targets :
 	Adding .Phony to a target will prevent Make from confusing the phony target with a file name.
 	in simple terms, commands and rules that are not meant to conflict with files with the same name 
 	for example :
-		<mark class="hltr-lg">clean - all - recompile -fclean ....</mark>
+~={green}clean - all - recompile -fclean ...=~
 
 
 undefined
