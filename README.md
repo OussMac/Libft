@@ -22,7 +22,7 @@ First order of business comes down to Setting up the Makefile.
  **Notes :**
 - Basic Makefile structure :
 ```make
-targer : dependencies
+target: dependencies
 commands
 ```
 First target is always the default : rule when you use the command make.
@@ -109,10 +109,10 @@ int ft_isdigit(int b)
 Note : The header file doesn't contain the actual code, just instructions to find the needed source code.
 
 ---
-
 ### The Functions :
 Just like during the pool in 1337, here in Libft in order to build our library we need to code a number of functions that will later be helpful throughout our common core.
 
+---
 - **Libc Functions :** 
 These include some useual functions from the standard libraries. 
 - isalpha
@@ -136,3 +136,45 @@ These include some useual functions from the standard libraries.
 - memcmp
 - strnstr
 - atoi
+---
+malloc usage in these :
+- calloc
+- strdup
+---
+- **Additional functions :**
+Additional non Libc functions:
+- ft_substr
+- ft_strjoin
+- ft_strtrim
+- ft_split
+- ft_itoa
+- ft_strmapi
+- ft_striteri
+- ft_putchar_fd
+- ft_putstr_fd
+- ft_putendl_fd
+- ft_putnbr_fd
+---
+* **Bonus part :**
+```
+TBD
+```
+
+---
+
+### The Library Libft.a :
+The library Libft.a simply put is a collection of precompiled code we can reuse in multiple programs.
+After compiling the source files `.c` into object files `.o`, we can combine them into a library
+using the command `ar`.
+
+example :
+```make
+libft.a: $(OBJs)
+ar rcs libft.a $(OBJs)
+```
+
+what does  `rcs` mean :
+`r` - means replace the contents of the library of it already exists.
+`c` - means create the library if it doesn't exist.
+`s` - adds an index to the library to speed up linking. `not needed but good practice`
+
