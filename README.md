@@ -21,8 +21,8 @@ First order of business comes down to Setting up the Makefile.
 
  **Notes :**
 - Basic Makefile structure :
-```
-target : dependencies 
+```make
+targer : dependencies
 commands
 ```
 First target is always the default : rule when you use the command make.
@@ -84,6 +84,11 @@ int ft_isdigit(int b);
 #endif
 ```
 
+The header file grabs the declared functions when initiated in a file with `#include "libft.h"`.
+this example grabs these source files and uses them like any other function declared within the main file.
+
+**At the end of the day the entire point of a header file is to help make our own Library.**
+
 `ft_isalpha.c`
 ```c
 #include "libft.h" 
@@ -95,11 +100,39 @@ int ft_isalpha(int a);
 `ft_isdigit.c`
 ```c
 #include "libft.h"
-int ft_is digit(int b)
+int ft_isdigit(int b)
 {
 //code responsable for this function
 }
 ```
 
-Note : The header file doesn't contain the actual code, just instructions to find the needed source coude.
+Note : The header file doesn't contain the actual code, just instructions to find the needed source code.
 
+---
+
+### The Functions :
+Just like during the pool in 1337, here in Libft in order to build our library we need to code a number of functions that will later be helpful throughout our common core.
+
+- **Libc Functions :** 
+These include some useual functions from the standard libraries. 
+- isalpha
+- isdigit
+- isalnum
+- isascii
+- isprint
+- strlen
+- memset
+- bzero
+- memcpy
+- memmove
+- strlcpy
+- strlcat
+- toupper
+- tolower
+- strchr
+- strchr
+- strncmp
+- memchr
+- memcmp
+- strnstr
+- atoi
