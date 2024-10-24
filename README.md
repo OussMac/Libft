@@ -73,4 +73,33 @@ for example :
 
 
 The header file in C is used to declare functions and variables, to avoid repeating ready to use functions from The Library   **Libft**   and always having them just by including the header file.
-using : `include "libft.h"`
+Using : `include "libft.h"`.
+
+example : `libft.h` (we declare here function prototypes later to be used in our src files)
+```c
+#ifndef LIBFT_H
+#define LIBFT_H
+int ft_isalpha(int a);
+int ft_isdigit(int b);
+#endif
+```
+
+`ft_isalpha.c`
+```c
+#include "libft.h" 
+int ft_isalpha(int a);
+{
+//code responsable for this function
+}
+```
+`ft_isdigit.c`
+```c
+#include "libft.h"
+int ft_is digit(int b)
+{
+//code responsable for this function
+}
+```
+
+Note : The header file doesn't contain the actual code, just instructions to find the needed source coude.
+
