@@ -24,6 +24,9 @@ First order of business comes down to Setting up the Makefile
 	target : dependencies 
 		commands
 		first target is always the default : rule when you use the command make
+	target -> is the file we want to make
+	dependencies -> are the files needed to exist for this target to be made
+	commands : for example like the compile command `gcc -o file.c -o file.o`
 
 * **Variables :** 
 	you can declare a variable using the syntax `(=)`
@@ -50,14 +53,17 @@ First order of business comes down to Setting up the Makefile
 	command -o \$\@ \$\<   |  `cc $(FLAGS) -o $@ $<`
 	
 - **Phony targets :**
-	Adding .Phony to a target will prevent Make from confusing the phony target with a file name.
+	Adding `.Phony` to a target will prevent Make from confusing the phony target with a file name.
 	in simple terms, commands and rules that are not meant to conflict with files with the same name 
 	for example :
 `clean - all - recompile -fclean ...`
 
 
 <img src="attachment/a69bd5c176ad65579372d57be7a06407.png" />
-### Libft.h (header file) :
+
+---
+### Libft.h (header file):
+
 
 The header file in C is used to declare functions and variables, to avoid repeating ready to use functions from The Library   **Libft**   and always having them just by including the header file i.
 using : `include "libft.h"`
