@@ -43,7 +43,7 @@ Usual variables: `FLAGS - CC - SRC - OBJ - NAME` ...
 Pattern rules are a powerful way for automation, when creating flexible rules.
 These let you create one 1 rule for many files instead of doing too many rules.
 
-Using the Pattern rules for example `%`
+Using the Pattern rules for example `%`:
 `%.o: %.c` means for any target file .o compile it from the same .c file
 `%` matches the file name but unlike `*` Wildcard is that `%` create
 relationships between the specific files, and `*` just match files without connecting them.
@@ -51,12 +51,12 @@ relationships between the specific files, and `*` just match files without conne
 - **Automatic variables :**
 
 `$@` : The target name.
-`$<` : The first dependency 
-`$^` : All dependencies
+`$<` : The first dependency.
+`$^` : All dependencies.
 
 example :
-target : dependency   |  `%.o : %.c`
-command -o \$\@ \$\<   |  `cc $(FLAGS) -o $@ $<`
+target : dependency   |  `%.o : %.c`.
+command -o \$\@ \$\<   |  `cc $(FLAGS) -o $@ $<`.
 
 - **Phony targets :**
 
@@ -178,3 +178,6 @@ what does  `rcs` mean :
 `c` - means create the library if it doesn't exist.
 `s` - adds an index to the library to speed up linking. `not needed but good practice`
 
+---
+
+The functions coded
