@@ -119,7 +119,7 @@ Just like during the pool in 1337, here in Libft in order to build our library w
 - **Libc Functions :** 
 These include some useual functions from the standard libraries. 
 ---
-- ft_isalpha.c
+- isalpha
 
 **Algorithm to solve the problem**
 
@@ -132,9 +132,40 @@ else `return (0);`
 
 ---
 - isdigit
+
+**Same process this time just for digits**
+
+We simply will have a `condition` to check `if()` the character passed `(int c)`\
+is within the range of digits in the ascii table `0-9`
+
+if so `return (1);`
+
+else `return (0);`
+
+---
 - isalnum
+
+**Alpha Numeric (just the previous functions combined)**
+
+We simply will have a `condition` to check `if()` the character passed `(int c)`\
+isdigit() OR isalpha() `0-9 OR a-z OR A-Z`
+
+if so `return (1);`
+
+else `return (0);`
+
+---
 - isascii
+
+By now you must have understood the process for these functions\
+check if `(int c)` is within the ascii range  `0 - 127`.
+
+---
 - isprint
+
+Check if its within the printable range `32 - 125`.
+
+---
 - strlen
 - memset
 - bzero
@@ -190,7 +221,7 @@ ar rcs libft.a $(OBJs)
 
 what does  `rcs` mean :
 `r` - means replace the contents of the library of it already exists.\
-`c` - whenever the library is created an informational message gets written to stderr, we silence that message.\
+`c` - means create the library if it doesn't exist.\
 `s` - adds an index to the library to speed up linking. `not needed but good practice`
 
 ---
