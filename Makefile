@@ -74,7 +74,7 @@ re: fclean all
 
 push: fclean
 	@git add .
-	@git commit -m "committed by: `whoami`, from: `hostname`, on `date`."
+	@git commit -m "committed by: `whoami`, on `date`."
 	@git push
 
 norm:

@@ -1,4 +1,4 @@
-![[LIBFT 421337 Project 1.png]]
+![](attachment/6f923dec162923423e7ee524f452c98e.png)
 
 ----
 #### **Step By step Plan To Make The Libft project**
@@ -69,7 +69,7 @@ for example :\
 `clean - all - recompile -fclean ...`.
 
 
-<img src="attachment/a69bd5c176ad65579372d57be7a06407.png" />
+![](attachment/a69bd5c176ad65579372d57be7a06407.png)
 
 ---
 ### Libft.h (header file):
