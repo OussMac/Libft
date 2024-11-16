@@ -1,3 +1,6 @@
+![[LIBFT 421337 Project 1.png]]
+
+----
 #### **Step By step Plan To Make The Libft project**
 
 **- What is Libft :**
