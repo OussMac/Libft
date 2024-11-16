@@ -6,7 +6,7 @@
 /*   By: oimzilen <oimzilen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:55:51 by oimzilen          #+#    #+#             */
-/*   Updated: 2024/11/13 17:19:37 by oimzilen         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:55:49 by oimzilen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f) (void *), void (*del) (void *));
 
-#endif //LIBFT_H
+#endif //LIBFT_H Defenition

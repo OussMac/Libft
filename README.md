@@ -190,7 +190,7 @@ ar rcs libft.a $(OBJs)
 
 what does  `rcs` mean :
 `r` - means replace the contents of the library of it already exists.\
-`c` - means create the library if it doesn't exist.\
+`c` - whenever the library is created an informational message gets written to stderr, we silence that message.\
 `s` - adds an index to the library to speed up linking. `not needed but good practice`
 
 ---

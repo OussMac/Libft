@@ -6,13 +6,13 @@
 /*   By: oimzilen <oimzilen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:44:22 by oimzilen          #+#    #+#             */
-/*   Updated: 2024/11/13 16:14:09 by oimzilen         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:56:39 by oimzilen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_len(int nbr)
+static	int	ft_len(int nbr)
 {
 	int	len;
 
