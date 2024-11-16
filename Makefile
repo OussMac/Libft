@@ -26,7 +26,7 @@ bonus: $(OBJB) $(NAME)
 %.o: %.c $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
-# handled bonus in the rule above, now removed and only kept the mandatory handeling. #
+# handled bonus Relink in the rule above, now removed and only kept the mandatory handeling. #
 
 clean:
 	rm -f $(OBJ) $(OBJB)
