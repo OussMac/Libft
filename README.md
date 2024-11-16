@@ -117,22 +117,6 @@ Just like during the pool in 1337, here in Libft in order to build our library w
 These include some useual functions from the standard libraries. 
 ---
 - ft_isalpha.c
-man Definition :
-```
-ISALPHA(3) (simplified)
-
-NAME
-    isalpha -- alphabetic character test
-SYNOPSIS
-    int isalpha(int c)
-DECRIPTION
-    The isalpha() function tests for any character for which isupper(3) or islower(3) is true. The value of the argument must be resprensentable as an unsigned char or the value of EOF.
-
-RETURN VALUES
-    The isalpha() function return zero if the character tests false and returns non-zero if the character tests true.
-```
-
-The simple explanation for this function would be `isalpha()` returns a non-zero integer if the character passed as an `int` is an alphabetical letter `(lowercase and uppercase)`
 
 **Algorithm to solve the problem**
 
@@ -143,21 +127,6 @@ if so `return (1);`
 
 else `return (0);`
 
-in code:
-```c
-int ft_isalpha(int c)
-{
-		//conditional checks if int c is within the range of alphabete
-	if ((c <= 'Z' && c >= 'A') || (c <= 'z' && c >= 'a'))
-		{
-			//returns non-zero value
-			return (1);
-		}
-		//return 0 if the is not within the range
-		return (0);
-}
-
-```
 ---
 - isdigit
 - isalnum
