@@ -119,7 +119,7 @@ Just like during the pool in 1337, here in Libft in order to build our library w
 - **Libc Functions :** 
 These include some useual functions from the standard libraries. 
 ---
-- isalpha
+- ft_isalpha.c
 
 **Algorithm to solve the problem**
 
@@ -132,66 +132,11 @@ else `return (0);`
 
 ---
 - isdigit
-
-**Same process this time just for digits**
-
-We simply will have a `condition` to check `if()` the character passed `(int c)`\
-is within the range of digits in the ascii table `0-9`
-
-if so `return (1);`
-
-else `return (0);`
-
----
 - isalnum
-
-**Alpha Numeric (just the previous functions combined)**
-
-We simply will have a `condition` to check `if()` the character passed `(int c)`\
-isdigit() OR isalpha() `0-9 OR a-z OR A-Z`
-
-if so `return (1);`
-
-else `return (0);`
-
----
 - isascii
-
-By now you must have understood the process for these functions\
-check if `(int c)` is within the ascii range  `0 - 127`.
-
----
 - isprint
-
-Check if its within the printable range `32 - 125`.
-
----
 - strlen
-
-Iterate over a string  `until value at index i = \0 Null Terminator,`using a while loop.\
-meaning: `String[i] == '\0'`.\
-and `return (i);` 
-Notes:\
-why use\
-```c
-size_t // size_t allways gives the biggest size possible on any system.
-```
-**In simple words** size_t is basically an **unsigned long** on a 64 bit system and unsigned int on a\
-32 bit system, size_t adjusts based on the system\
-but for us its an unsigned long.
-
----
 - memset
-
-Memory set or memset writes `len` first number of bytes, of value `int c` in the string b\
-
-Why use **Unsigned char**:\
-to represent all 256 possible byte values, basically expands range \
-from `0-127` to `0-255` using the MSB, and not dealing with the signedness of a normal int.
-
-Why pass value as an `int c`:\
-
-
 - bzero
 - memcpy
 - memmove
