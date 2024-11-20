@@ -167,7 +167,31 @@ Check if its within the printable range `32 - 125`.
 
 ---
 - strlen
+
+Iterate over a string  `until value at index i = \0 Null Terminator,`using a while loop.\
+meaning: `String[i] == '\0'`.\
+and `return (i);` 
+Notes:\
+why use\
+```c
+size_t // size_t allways gives the biggest size possible on any system.
+```
+**In simple words** size_t is basically an **unsigned long** on a 64 bit system and unsigned int on a\
+32 bit system, size_t adjusts based on the system\
+but for us its an unsigned long.
+
+---
 - memset
+
+Memory set or memset writes `len` first number of bytes, of value `int c` in the string b\
+
+Why use **Unsigned char**:\
+to represent all 256 possible byte values, basically expands range \
+from `0-127` to `0-255` using the MSB, and not dealing with the signedness of a normal int.
+
+Why pass value as an `int c`:\
+
+
 - bzero
 - memcpy
 - memmove
