@@ -119,7 +119,7 @@ Just like during the pool in 1337, here in Libft in order to build our library w
 - **Libc Functions :** 
 These include some useual functions from the standard libraries. 
 ---
-- ft_isalpha.c
+- isalpha
 
 **Algorithm to solve the problem**
 
@@ -132,43 +132,237 @@ else `return (0);`
 
 ---
 - isdigit
+
+Checks if a character is a **digit** (`0–9`). \
+Returns `1` if true, `0` otherwise.
+
+---
 - isalnum
+
+Checks if a character is **alphanumeric** (a letter `a–z` or `A–Z` or a digit `0–9`).\
+Returns `1` if true, `0` otherwise.\
+Basically `isalpha` and `isdigit` combined.
+
+---
 - isascii
+
+Checks if a character is part of the **ASCII set** (values `0–127`). \
+Returns `1` if true, `0` otherwise.
+
+---
 - isprint
+
+Checks if a character is printable, i.e., within the range `32–126`. Returns `1` if true, `0` otherwise.
+
+---
 - strlen
+
+Counts characters in a string until the null terminator (`'\0'`) is found. Returns the count.
+
+**Why `size_t`?** \
+`size_t` is an **unsigned integer** that adjusts to the largest size possible on the system (e.g., `unsigned long` on 64-bit systems and `unisigned int` in 32 bit systems).
+
+---
 - memset
+
+Fill `len` number of bytes of raw memory at `b`.\
+Each byte gets the value `(unsigned char)c`.\
+
+**Why unsigned char:** To represent all 256 possible byte values (0–255) without issues from signedness.\
+`utilizing (MSB)` most significant bit that is used for signed numbers in 2s compliment.\
+Return `b`.\
+
+---
 - bzero
+
+- Set `n` bytes of memory at `b` to `0`.\
+- Equivalent to `memset(b, 0, n)`.
+
+---
 - memcpy
+
+ Copy `n` bytes from `src` to `dest`.\
+ No support for overlapping memory. `(research overlap handling in memmove)`\
+Return `dest`.
+
+---
 - memmove
+
+Copy `n` bytes from `src` to `dest`.\
+Safely handles overlapping memory.\
+Return `dest`.
+
+---
 - strlcpy
+
+Copy `src` to `dst` up to `dstsize - 1`.\
+Null-terminate `dst`.\
+Return the length of `src`.
+
+---
 - strlcat
+
+Append `src` to `dst` up to `dstsize - strlen(dst) - 1`.\
+Null-terminate `dst`.\
+Return total length of `dst` + `src`.
+
+---
 - toupper
+
+If `c` is lowercase, convert to uppercase.\
+Otherwise, return `c`.
+
+---
 - tolower
+
+If `c` is uppercase, convert to lowercase.\
+Otherwise, return `c`.
+
+---
 - strchr
-- strchr
+
+Search for the first occurrence of `c` in `s`.\
+Return a pointer to it or `NULL` if not found.
+
+---
+- strrchr
+
+Search for the Last occurrence of `c` in `s`.\
+Return a pointer to it or `NULL` if not found.
+
+---
 - strncmp
+
+Compare `s1` and `s2` up to `n` characters.\
+Return `0` if equal, `<0` if `s1 < s2`, `>0` if `s1 > s2`.
+
+---
 - memchr
+
+Search for byte `c` in the first `n` bytes of `s`.\
+Return a pointer to it or `NULL` if not found.
+
+---
 - memcmp
+
+Compare the first `n` bytes of `b1` and `b2`.\
+Return `0` if equal, `<0` if `b1 < b2`, `>0` if `b1 > b2`.\
+basically like strcmp, but comparing the first two differing bytes in raw memory.
+
+---
 - strnstr
+
+Search for substring `needle` in `haystack` up to `len`.\
+Return a pointer to it or `NULL` if not found.
+
+---
 - atoi
+
+Ignore leading spaces.\
+Convert numeric characters to an integer.\
+Stop at the first non-numeric character.\
+Return the integer.
+
 ---
 malloc usage in these :
 - calloc
+
+Use `malloc` to allocate `num * size` bytes of memory.\
+Sets all allocated bytes to `0`.\
+Returns a pointer to the allocated memory.
+
+---
 - strdup
+
+Use `malloc` to allocate memory for a copy of the string (`strlen(s) + 1` bytes).\
+Copies the string, including the null terminator, into the allocated memory.\
+Returns a pointer to the new string.
+
 ---
 - **Additional functions :**
+
 Additional non Libc functions:
+
+---
 - ft_substr
+
+Extract a substring from `s` starting at index `start`.\
+Allocate memory for `len + 1` bytes (null-terminated).\
+Copy up to `len` characters.\
+Return the new substring.
+
+---
 - ft_strjoin
+
+Allocate memory for `s1 + s2 + 1` bytes.\
+Copy `s1` into the new string.\
+Append `s2`.\
+Return the concatenated string.
+
+---
 - ft_strtrim
+
+Remove characters from the start and end of `s` that appear in `set`.\
+Allocate memory for the trimmed string.\
+Copy the trimmed part of `s`.\
+Return the new string.
+
+---
 - ft_split
+
+Split `s` into substrings using `c` as the delimiter.\
+Allocate memory for the list, an array of srtings `Matrix` to the substrings.\
+Copy each substring into allocated memory.\
+Null-terminate the array.\
+If any string failed to allocate, free all the alocated strings and the entire list\
+Return the array.
+
+---
 - ft_itoa
+
+Convert an integer `n` to its string representation.\
+Allocate memory for the string (including space for the sign and null terminator).\
+Fill the string with digits (and the sign if negative).\
+Return the string.
+
+---
 - ft_strmapi
+
+Apply a function `f` to each character of `s`, passing its index and value.\
+Allocate memory for the new string.\
+Store the result of `f` for each character in the new string.\
+Return the new string.
+
+---
 - ft_striteri
+
+Apply a function `f` to each character of `s`, passing its index and address.\
+Modify `s` in place.\
+Return nothing (void).
+
+---
 - ft_putchar_fd
+
+Write the character `c` to the file descriptor `fd`.
+
+---
 - ft_putstr_fd
+
+Write the string `s` to the file descriptor `fd`.
+
+---
 - ft_putendl_fd
+
+Write the string `s` to the file descriptor `fd`.\
+and a newline (`\n`).
+
+---
 - ft_putnbr_fd
+
+Write the integer `n` as a string to the file descriptor `fd`.\
+Handle the sign for negative numbers.\
+Write digits one by one.
+
 ---
 * **Bonus part :**
 ```
