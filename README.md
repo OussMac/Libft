@@ -391,3 +391,5 @@ what does  `rcs` mean :
 
 The functions coded
 (ghncodi ga3 lfunctions onzidhom for now just till i update everything)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
