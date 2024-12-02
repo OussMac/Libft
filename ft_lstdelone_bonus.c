@@ -6,7 +6,7 @@
 /*   By: oimzilen <oimzilen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 21:37:24 by oimzilen          #+#    #+#             */
-/*   Updated: 2024/11/16 17:56:50 by oimzilen         ###   ########.fr       */
+/*   Updated: 2024/12/02 01:07:39 by oimzilen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (del || lst)
+	if (del && lst)
 		del(lst->content);
 	if (lst)
 		free(lst);

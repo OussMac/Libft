@@ -6,7 +6,7 @@
 /*   By: oimzilen <oimzilen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:43:17 by oimzilen          #+#    #+#             */
-/*   Updated: 2024/11/16 17:57:59 by oimzilen         ###   ########.fr       */
+/*   Updated: 2024/12/02 00:26:30 by oimzilen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	fill_word(const char *s, size_t i, char c, size_t *start)
 	return (i);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t		i;
 	size_t		j;

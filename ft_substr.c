@@ -6,13 +6,13 @@
 /*   By: oimzilen <oimzilen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:37:23 by oimzilen          #+#    #+#             */
-/*   Updated: 2024/11/16 17:58:40 by oimzilen         ###   ########.fr       */
+/*   Updated: 2024/12/02 00:24:46 by oimzilen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(const char *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*sub;

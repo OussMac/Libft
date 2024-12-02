@@ -6,7 +6,7 @@
 /*   By: oimzilen <oimzilen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:42:00 by oimzilen          #+#    #+#             */
-/*   Updated: 2024/11/16 17:58:36 by oimzilen         ###   ########.fr       */
+/*   Updated: 2024/12/02 00:25:48 by oimzilen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static void	ft_checking(size_t *i, size_t *j, const char *s1, const char *set)
 	}
 }
 
-char	*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*tmp;
 	size_t	i;
