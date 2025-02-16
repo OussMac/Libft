@@ -51,5 +51,5 @@ int	ft_atoi(const char *str)
 		pow = (pow * 10) + (str[i] - 48);
 		i++;
 	}
-	return (pow * s);
+	return ((int)pow * s);
 }
